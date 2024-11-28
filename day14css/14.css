@@ -1,16 +1,27 @@
-#ed{
-    background-color:pink;color: black;
-    font-size: 20px; font-style: italic;
+.container{
+    display: grid;
+    grid-template-columns: repeat(5,1fr);
+    top: 10px;
+    column-gap: 10px;
+    row-gap: 10px;
 }
-#a,.b{
-    background-color: blue;color: black;
-    font-style: oblique;
+.A{
+    background-color:tomato;
 }
-h2{
-    background-color: greenyellow;
+@media (max-width:400px){
+    .container{
+        display: grid;
+        grid-template-columns: repeat(3,2fr);
+    }
 }
-pre,p{
-    background-color: lightcoral;
-    color: black;
-    font-style: oblique;
+@media (min-width:400px) and (max-width:768px){
+    .container{
+        display: grid;
+        grid-template-columns: repeat(4,3fr);
+    }
+}
+@media (min-width:769px) and (max-width:1024px){
+    .container{
+        grid-template-columns: repeat(5,1fr);
+    }
 }
